@@ -1,11 +1,14 @@
-import { Container } from 'react-bootstrap';
+import HomeXS from "./home/HomeXS";
+import LandaXS from "./landa/LandaXS";
 
-export default function Mobile() {
+export default function Mobile(props) {
   return (
     <>
-    <Container fluid>
-      <h1>Mobile</h1>
-    </Container>
+    {
+      props.page!="L" 
+        ? <HomeXS />
+        : <LandaXS />
+    }
     </>
   );
 }
